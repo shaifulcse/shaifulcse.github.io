@@ -1,0 +1,271 @@
+/*
+ * Styles for my résumé/CV.
+ *
+ * 2015–2018 © Eddie Antonio Santos.
+ */
+
+@import "octicons";
+
+// LaTeX-inspired theme.
+
+// Fonts
+$body-font: Latin Modern Roman, serif;
+
+// Colours
+$background-color: white;
+$main-colour: #111;
+$link-color: #37A;
+
+$selection-text-colour: white;
+$selection-colour: #38C;
+
+// Global stuff.
+body {
+  font: 11pt $body-font;
+  line-height: 1.25;
+
+  color: $main-colour;
+  background-color: $background-color;
+}
+
+.container {
+  text-align: center;
+
+  main {
+    text-align: left;
+    margin: 0 auto;
+
+    @media screen {
+      max-width: 40em;
+    }
+  }
+}
+
+
+// Mix this into the @page html ruleset to faintly render page borders.
+@mixin debug-page($page-width, $page-height) {
+  width: $page-width;
+  height: $page-height;
+  margin: auto;
+
+  box-shadow: 1px 1px 3px fade-out(black, .9);
+}
+
+@media print {
+  html {
+    //@include debug-page(8.5in, 11in);
+  }
+
+  /* Explicit printed page styles. */
+  @page {
+    margin: 72pt 55pt 36pt;
+  }
+
+  a {
+    text-decoration: none;
+    text-decoration-skip: all;
+
+    &:link, &:visited { color: inherit; }
+
+    h1 &:after, h2 &:after, h3 &:after { display: none }
+  }
+
+  .no-print { display: none }
+}
+
+@media not print {
+  .print-only { display: none }
+}
+
+// De-emphasize links in headings.
+h1 a:link, h1 a:visited,
+h2 a:link, h2 a:visited,
+h3 a:link, h3 a:visited {
+  color: inherit;
+  transition: color 3s ease;
+}
+
+a:link, a:visited,
+h1 a:hover, h1 a:active,
+h2 a:hover, h2 a:active,
+h3 a:hover, h3 a:active {
+  color: $link-color;
+}
+a:hover, a:active {
+  text-decoration: none;
+}
+
+@media print {
+  a:link, a:visited, a:active {
+    color: inherit;
+  }
+}
+
+// Transition effects
+h1 a:hover, h1 a:active,
+h2 a:hover, h2 a:active,
+h3 a:hover, h3 a:active {
+  transition: color 0.25s ease;
+}
+
+// Header stuff
+.masthead {
+  text-align: center;
+  padding: 6em 0 2em;
+
+  // Override the bold font weight of the headers.
+  .title, .author, .tagline {
+    font-weight: normal;
+    margin: 0.5em 0;
+  }
+
+  .author { font-size: 24pt }
+  .title { font-size: 18pt; }
+  .tagline { font-size: 12pt; }
+
+  ul.contact {
+    list-style: none;
+    padding-left: 0;
+
+    li { display: inline-block; }
+  }
+}
+
+.nothing-to-see-here:before { content: "easanto"; }
+.nothing-to-see-here:after { content: "@ualberta.ca"; }
+
+.contact {
+  .email:before { @include octicon($email-content); }
+  .github:before { @include octicon($github-mark-content); }
+}
+
+/* Get rid of weird gap. */
+li > p:first-child { margin: 0 inherit; }
+
+/* Get rid of big margins. */
+li > p {
+  margin: 0;
+}
+
+// Use a special colour for selections.
+::-moz-selection {
+  background: $selection-colour;
+  color: $selection-text-colour;
+  text-shadow: none;
+}
+::selection {
+  background: $selection-colour;
+  color: $selection-text-colour;
+  text-shadow: none;
+}
+
+// Sections of the page.
+
+main > article > section {
+  margin-top: 3em;
+
+  h2 {
+    font-variant: small-caps;
+    line-height: 1.5;
+    page-break-inside: avoid;
+
+    &:before, &:after {
+        display: block;
+        content: "";
+        outline: 0.5pt solid #666;
+    }
+  }
+}
+
+.title-location-block {
+  margin: 1.5em 0 1em;
+  page-break-inside: avoid;
+
+  & > hgroup {
+    display: flex;
+
+    .title {
+      flex: 1;
+      margin: 0;
+    }
+
+    .location {
+      margin: 0;
+      text-align: right;
+    }
+  }
+}
+
+.in-progress {
+  font-style: italic;
+  color: #666;
+}
+
+/* Get rid of unnecessary margin. */
+.experience dd {
+  margin: auto auto 2em 0;
+}
+
+.experience .time {
+  color: #666;
+}
+
+/* Language list thing. */
+.lang-list {
+  list-style: none;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 0 0.25em;
+}
+.lang-list > li { display: inline-block; }
+.lang-tier-1 { font-weight: bold; }
+.lang-tier-2 { font-size: 0.8em; }
+.lang-tier-3 { font-size: 0.6em; }
+/* Separate list entries with commas. */
+.lang-list > li:not(:last-child):after {
+  content: ", ";
+}
+
+.corner-nav {
+  font: 10pt sans-serif;
+  position: fixed;
+  top: 1em;
+  opacity: 0.3;
+  transition: opacity 0.25s ease;
+}
+.corner-nav:hover {
+  opacity: 1;
+}
+@media print {
+  .corner-nav { display: none }
+}
+/* Add a little hooked arrow going back. */
+.back:before { content: "\21A9  " }
+
+/* Styles for "technical skills" section */
+.skills {
+  dl {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+
+  dt, dd {
+    display: inline;
+    text-align: left;
+    margin: .25em 0;
+    width: auto;
+    line-height: 1.2;
+  }
+
+  dt {
+    flex-basis: 8em; /* "Version Control" is 7.5ems in Latin Modern Roman */
+  }
+  dd {
+    flex-basis: calc(100% - 8em);
+    margin-bottom: .5em;
+    & > p {
+      margin: 0;
+    }
+  }
+}
