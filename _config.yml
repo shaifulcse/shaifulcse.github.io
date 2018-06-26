@@ -6,7 +6,7 @@ safe: true
 # Some metadata... like my social media handles, etc.
 me:
   github: https://github.com/eddieantonio
-  website: https://shaifulcse.github.io/
+  website: eddieantonio.ca
   resume: /resume/
   cv: /cv/
   twitter: https://twitter.com/_eddieantonio
