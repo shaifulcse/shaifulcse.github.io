@@ -36,7 +36,7 @@
 	        <li> <a class="blog" href='{{ site.me.blog }}'> <figure> <img src='style/bg/publication.png' width="50" height="50"alt='missing' />
     <figcaption>Publications</figcaption> </figure> </a> </li>	
 	
-	<li> <a class="blog" href='{{ site.me.blog }}'> <figure> <img src='style/bg/google_scholar.jpg' width="50" height="50"alt='missing' />
+	<li> <a class="blog" href='https://scholar.google.ca/citations?user=DRpyER8AAAAJ&hl=en'> <figure> <img src='style/bg/google_scholar.jpg' width="50" height="50"alt='missing' />
     <figcaption>GoogleScholar</figcaption> </figure> </a> </li>	
 	
 
