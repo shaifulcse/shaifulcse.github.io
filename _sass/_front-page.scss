@@ -64,7 +64,7 @@ main {
 
   text-align: center;
 
-  text-transform: lowercase;
+  text-transform: capitalize;
   background-color: $banner-color;
   padding: 1em 0 1.5em;
 }
@@ -81,7 +81,7 @@ h1.site-title {
 }
 
 .eddie-antonio { color: $highlight-colour; }
-.santos { font-weight: bold; }
+.santos { font-weight: bolder; }
 
 .social-media {
   margin-top: 1em;
