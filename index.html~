@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang='en'>
   <head>
@@ -15,30 +17,30 @@
       html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; }
     </style>
     <link href='//fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
-    <link media='all' href='/style/styles.css' type='text/css' rel='stylesheet' />
-    <link rel="icon" type="image/png" href="/assets/favicon-64.png" />
+    <link media='all' href='{{ site.baseurl }}/style/styles.css' type='text/css' rel='stylesheet' />
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon-64.png" />
 
 </head>
 <body class="home">
   <main>
-    <h1 class="site-title"><a href="">
+    <h1 class="site-title"><a href="{{ site.baseurl }}">
         <span class="eddie-antonio">Shaiful</span>
         <span class="santos">Chowdhury</span></a></h1>
     <h2>PhD Candidate, Computing Science, University of Alberta</h2>
 
     <nav class="social-media inline-nav"><ul>
 
-	        <li> <a class="blog" href='https://shaifulcse.github.io//blog/'> <figure> <img src='style/bg/about.jpg' width="50" height="50"alt='missing' />
+	        <li> <a class="blog" href='{{ site.me.blog }}'> <figure> <img src='style/bg/about.jpg' width="50" height="50"alt='missing' />
     <figcaption>AboutMe</figcaption> </figure> </a> </li>
 
-	        <li> <a class="blog" href='https://shaifulcse.github.io//blog/'> <figure> <img src='style/bg/publication.png' width="50" height="50"alt='missing' />
+	        <li> <a class="blog" href='{{ site.me.blog }}'> <figure> <img src='style/bg/publication.png' width="50" height="50"alt='missing' />
     <figcaption>Publications</figcaption> </figure> </a> </li>	
 	
-	<li> <a class="blog" href='https://scholar.google.ca/citations?user=DRpyER8AAAAJ&hl=en'> <figure> <img src='style/bg/google_scholar.jpg' width="50" height="50"alt='missing' />
+	<li> <a class="blog" href='{{ site.me.blog }}'> <figure> <img src='style/bg/google_scholar.jpg' width="50" height="50"alt='missing' />
     <figcaption>GoogleScholar</figcaption> </figure> </a> </li>	
 	
 
-        <li> <a class="blog" href='https://shaifulcse.github.io//blog/'> <figure> <img src='style/bg/blog.png' width="50" height="50"alt='missing' />
+        <li> <a class="blog" href='{{ site.me.blog }}'> <figure> <img src='style/bg/blog.png' width="50" height="50"alt='missing' />
     <figcaption>ResearchBlog</figcaption> </figure> </a> </li>
 
         <li> <a  href='https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzaGFpZnVsaG9tZXxneDo3YjIxOTZlNGQxYmJjMjBk'> <figure> <img src='style/bg/cv.jpeg' width="50" height="50"alt='missing' />
@@ -46,9 +48,9 @@
 
 	 <li> <a class="github" href='https://www.linkedin.com/in/shaiful-alam-chowdhury-ba41a865/'> <figure> <img src='style/bg/linkedin.png' width="50" height="50" />     <figcaption>LinkedIn</figcaption> </figure> </a> </li>
 
-        <li> <a class="github" href='https://github.com/shaifulcse'> <figure> <img src='style/bg/github.png' width="50" height="50"alt='missing' />     <figcaption>GitHub</figcaption> </figure> </a> </li>
+        <li> <a class="github" href='{{ site.me.github }}'> <figure> <img src='style/bg/github.png' width="50" height="50"alt='missing' />     <figcaption>GitHub</figcaption> </figure> </a> </li>
 
-        <li> <a class="twitter" href='https://twitter.com/shaiful_cs'>  <figure> <img src='style/bg/twitter.png' width="50" height="50"alt='missing' />
+        <li> <a class="twitter" href='{{ site.me.twitter }}'>  <figure> <img src='style/bg/twitter.png' width="50" height="50"alt='missing' />
     <figcaption>Twitter</figcaption> </figure> </a> </li>
 
     </ul></nav>
