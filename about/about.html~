@@ -1,0 +1,53 @@
+---
+---
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome" />
+
+    <title>Shaiful Chowdhury</title>
+   <meta name="author" content="Shaiful Chowdhury">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link media="all" href="{{ baseurl }}/style/fonts/latin-modern-roman/stylesheet.css" type="text/css" rel="stylesheet">
+    <link media="all" href="{{ baseurl }}/style/resume.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+
+<ui>
+<h1>
+Education:
+</h1>
+
+<li>
+<h2>
+PhD Candidate, Computing Science, University of Alberta, Canada (2014, Sept- till date).
+</h2>
+</li>
+
+<li>
+<h2>
+MSc., Computer Science, University of Saskatchewan (2011 - 2013), Canada.
+</h2>
+</li>
+
+<li>
+<h2>
+BSc., Computer Science & Engineering, University of Chittagong (2003 - 2009), Bangladesh.
+</h2>
+</li>
+
+</ui>
+<h1>
+Current Research Interests:
+</h1>
+
+<div style="background-color:green;color:white;padding:10px;">
+  <h2>Software Energy Models</h2>
+  <h3><p>Measuring Software energy requires expensive tools and expertise---a far cry for most individual developers.<br>
+My research focuses on developing machine learning based software energy consumption models,<br> that can estimate energy consumption without any hardware instrumentation. <br>Please check our EMSE and MSR papers (GreenScaler and GreenOracle). </p></h3>
+  
+</div> 
+</body>
+</html>
